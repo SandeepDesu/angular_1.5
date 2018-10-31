@@ -1,0 +1,20 @@
+<div ng-controller="first">
+    <h1>
+        home page
+    </h1>
+
+    <div>
+            <input type="text" ng-model="cacheKey" />
+        <input type="text" ng-model="cacheValue" />
+        <input type="button" ng-click="save()" value="Save"/>
+    </div>
+    <div>
+        <input type="button" ng-click="get()" value="Get" />
+    </div>
+    <div ng-repeat="(key, value) in cache">
+            <span ng-bind="key"></span>
+            <span>: </span>
+            <b ng-bind="value"></b>
+    </div>
+    <a ng-click="changeRoute()">Subjects page</a>
+</div>
